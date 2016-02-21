@@ -1,0 +1,7 @@
+midic help
+  Show this message.
+midic list
+  Show available midi devices.
+midic open PORT
+  Open PORT and print events.
+
