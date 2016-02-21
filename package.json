@@ -1,6 +1,6 @@
 {
   "name": "midic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "command to read midi data from a device",
   "bin": {
     "midic": "cmd.js"
