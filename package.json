@@ -1,7 +1,7 @@
 {
   "name": "midic",
   "version": "1.0.0",
-  "description": "",
+  "description": "command to read midi data from a device",
   "bin": {
     "midic": "cmd.js"
   },
@@ -9,11 +9,19 @@
     "midi": "^0.9.4",
     "minimist": "^1.2.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "keywords": [
+    "midi",
+    "command"
+  ],
   "author": "substack",
-  "license": "BSD"
+  "license": "BSD",
+  "main": "cmd.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/substack/midic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/substack/midic/issues"
+  },
+  "homepage": "https://github.com/substack/midic#readme"
 }

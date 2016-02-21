@@ -1,6 +1,6 @@
 # midic
 
-command to read midi data
+command to read midi data from a device
 
 # usage
 
