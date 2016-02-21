@@ -3,7 +3,7 @@ var midi = require('midi')
 var minimist = require('minimist')
 
 var argv = minimist(process.argv.slice(2), {
-  alias: { k: 'key' }
+  alias: { k: 'key', t: 'threshold' }
 })
 if (argv._[0] === 'help' || argv.help) {
   usage(0)
@@ -20,7 +20,13 @@ if (argv._[0] === 'help' || argv.help) {
   var state = {}
   input.on('message', function (dt, data) {
     if (argv.key) {
-      state[data[argv.key]] = data
+      var k = data[argv.key]
+      state[k] = data
+      var t = argv.threshold
+      if (t) {
+        var s = t.split(':')
+        if (data[s[0]] <= Number(s[1])) delete state[k]
+      }
       console.log(JSON.stringify({ delta: dt, data: state }))
     } else console.log(JSON.stringify({ delta: dt, data: data }))
   })
