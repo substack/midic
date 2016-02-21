@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+var fs = require('fs')
+var path = require('path')
 var midi = require('midi')
 var minimist = require('minimist')
 
