@@ -5,3 +5,10 @@ midic list
 midic open PORT
   Open PORT and print events.
 
+  -k KEY --key KEY
+    Group data by KEY into persistent state.
+
+  -t KEY:VALUE --threshold KEY:VALUE
+    Remove data from persistent state where the data at KEY is less than or
+    equal to VALUE.
+
